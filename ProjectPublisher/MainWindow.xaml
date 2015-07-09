@@ -1,0 +1,19 @@
+﻿<Window x:Class="ProjectPublisher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:ProjectPublisher.WizardViews"
+        Title="UpdateConfigCreater" Height="350" Width="525">
+    <Grid>
+        <Grid x:Name ="SelectPublish" Visibility="{Binding SelectPublishDirVis}">
+            <controls:SelectPublishDirControl DataContext="{Binding SelectPublishDirViewModel}"></controls:SelectPublishDirControl>
+        </Grid>
+        <Grid x:Name ="SelectApp"  Visibility="{Binding SelectAppVis}">
+            <controls:SelectAppControl DataContext="{Binding SelectAppViewModel}"></controls:SelectAppControl>
+        </Grid>
+        <Grid x:Name ="ExportConfig"  Visibility="{Binding ExportConfigVis}">
+            <controls:ExportConfigControl DataContext="{Binding ExportConfigViewModel}"></controls:ExportConfigControl>
+        </Grid>
+    </Grid>
+    
+</Window>
+    
